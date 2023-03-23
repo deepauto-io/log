@@ -2,6 +2,13 @@
 
 logrus encapsulated log library.
 
+
+# install
+
+```golang
+go get github.com/workpieces/log
+```
+
 # Example
 
 ```golang
