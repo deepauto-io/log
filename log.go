@@ -30,6 +30,7 @@ type Logger interface {
 	Debug(...interface{})
 	Info(...interface{})
 	Error(...interface{})
+	Warn(...interface{})
 
 	WithField(string, interface{}) Logger
 
