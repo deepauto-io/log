@@ -131,6 +131,20 @@ func New(l Level) Logger {
 	}
 }
 
+// NewJ wraps a logrus Logger
+func NewJ(l Level) Logger {
+	logger := &logrus.Logger{
+		Out:       os.Stderr,
+		Formatter: new(logrus.JSONFormatter),
+		Hooks:     make(logrus.LevelHooks),
+		Level:     logrus.Level(l),
+	}
+
+	return &logrusLogger{
+		l: logrus.NewEntry(logger),
+	}
+}
+
 // NewNop wraps a default logrus Logger
 func NewNop() Logger {
 	logger := &logrus.Logger{
