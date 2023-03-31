@@ -158,3 +158,17 @@ func NewNop() Logger {
 		l: logrus.NewEntry(logger),
 	}
 }
+
+// NewJNop wraps a default logrus Logger
+func NewJNop() Logger {
+	logger := &logrus.Logger{
+		Out:       os.Stderr,
+		Formatter: new(logrus.JSONFormatter),
+		Hooks:     make(logrus.LevelHooks),
+		Level:     logrus.DebugLevel,
+	}
+
+	return &logrusLogger{
+		l: logrus.NewEntry(logger),
+	}
+}
