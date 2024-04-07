@@ -1,4 +1,4 @@
-module github.com/workpieces/log
+module github.com/deepauto-io/log
 
 go 1.19
 

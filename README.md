@@ -25,7 +25,7 @@ ocean","size":10,"time":"2014-03-10 19:57:38.562264131 -0400 EDT"}
 ## Install
 
 ```golang
-go get github.com/workpieces/log
+go get github.com/deepauto-io/log
 ```
 
 ## Example
